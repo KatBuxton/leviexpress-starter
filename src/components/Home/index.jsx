@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { JourneyPicker } from '../JourneyPicker';
 import { JourneyDetail } from '../JourneyDetail';
-import { SelectedSeat } from '../SelectedSeat';
+// import { SelectedSeat } from '../SelectedSeat';
 import { useNavigate } from "react-router-dom";
-
+import { SeatPicker } from '../SeatPicker';
 
 export const Home = (handleJourneyChange) => {
   const [journey, setJourney] = useState(null)
@@ -46,7 +46,7 @@ export const Home = (handleJourneyChange) => {
       </div>
       <div >
         {journey !== null
-          ? <SelectedSeat number={journey.autoSeat} />
+          ? <SeatPicker number={journey.autoSeat} />
           : null}
       </div>
       <div className="controls container">
